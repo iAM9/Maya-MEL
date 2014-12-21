@@ -1,4 +1,26 @@
+/*
+------------
+----iAM9----
+------------
 
+a short MEL script that helps mirror the right controls of the popular 
+  Norman script to left and vice-versa.
+  
+  --------------------------------------------------
+  https://sites.google.com/site/normanrig/
+  (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+  Note: I don't own the Norman Rig
+  -----------------------------------------------------
+  
+  The script includes shoulders, clevicles, hands,
+  feet, elbows, knees and feet.
+  
+  Used "Short" attribute names.
+  
+  Useful in creating walk or run cycles.
+  
+*/  
+  
 
 
 //--------------- SHOULDERS----------------//
