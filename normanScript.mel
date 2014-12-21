@@ -1,0 +1,101 @@
+
+
+
+//--------------- SHOULDERS----------------//
+float $rightArmA_rx = getAttr("ctrlFK_Rt_ArmA.rx");
+float $rightArmA_ry = getAttr("ctrlFK_Rt_ArmA.ry");
+float $rightArmA_rz = getAttr("ctrlFK_Rt_ArmA.rz");
+
+float $leftArmA_rx = getAttr("ctrlFK_Lf_ArmA.rx");
+float $leftArmA_ry = getAttr("ctrlFK_Lf_ArmA.ry");
+float $leftArmA_rz = getAttr("ctrlFK_Lf_ArmA.rz");
+
+setAttr("ctrlFK_Rt_ArmA.rx", $leftArmA_rx);
+setAttr("ctrlFK_Rt_ArmA.ry", $leftArmA_ry);
+setAttr("ctrlFK_Rt_ArmA.rz", $leftArmA_rz);
+
+setAttr("ctrlFK_Lf_ArmA.rx", $rightArmA_rx);
+setAttr("ctrlFK_Lf_ArmA.ry", $rightArmA_ry);
+setAttr("ctrlFK_Lf_ArmA.rz", $rightArmA_rz);
+//--------------- SHOULDERS----------------//
+
+// ------------ CLAVICLES ------------//
+float $lfClav_rz = getAttr("ctrlFK_Lf_Clavicle.rz");
+float $rtClav_rz = getAttr("ctrlFK_Rt_Clavicle.rz");
+
+setAttr("ctrlFK_Lf_Clavicle.rz", $rtClav_rz);
+setAttr("ctrlFK_Rt_Clavicle.rz", $lfClav_rz);
+// ------------ CLAVICLES ------------//
+
+//--------------- ELBOWS ----------------//
+float $rightArmB_rx = getAttr("ctrlFK_Rt_ArmB.rx");
+float $rightArmB_ry = getAttr("ctrlFK_Rt_ArmB.ry");
+float $rightArmB_rz = getAttr("ctrlFK_Rt_ArmB.rz");
+
+float $leftArmB_rx = getAttr("ctrlFK_Lf_ArmB.rx");
+float $leftArmB_ry = getAttr("ctrlFK_Lf_ArmB.ry");
+float $leftArmB_rz = getAttr("ctrlFK_Lf_ArmB.rz");
+
+setAttr("ctrlFK_Rt_ArmB.rx", $leftArmB_rx);
+setAttr("ctrlFK_Rt_ArmB.ry", $leftArmB_ry);
+setAttr("ctrlFK_Rt_ArmB.rz", $leftArmB_rz);
+
+setAttr("ctrlFK_Lf_ArmB.rx", $rightArmB_rx);
+setAttr("ctrlFK_Lf_ArmB.ry", $rightArmB_ry);
+setAttr("ctrlFK_Lf_ArmB.rz", $rightArmB_rz);
+//--------------- ELBOWS ----------------//
+
+
+
+//--------------- HANDS -----------------//
+float $rightArmC_rx = getAttr("ctrlFK_Rt_ArmC.rx");
+float $rightArmC_ry = getAttr("ctrlFK_Rt_ArmC.ry");
+float $rightArmC_rz = getAttr("ctrlFK_Rt_ArmC.rz");
+
+float $leftArmC_rx = getAttr("ctrlFK_Lf_ArmC.rx");
+float $leftArmC_ry = getAttr("ctrlFK_Lf_ArmC.ry");
+float $leftArmC_rz = getAttr("ctrlFK_Lf_ArmC.rz");
+
+setAttr("ctrlFK_Rt_ArmC.rx", $leftArmC_rx);
+setAttr("ctrlFK_Rt_ArmC.ry", $leftArmC_ry);
+setAttr("ctrlFK_Rt_ArmC.rz", $leftArmC_rz);
+
+setAttr("ctrlFK_Lf_ArmC.rx", $rightArmC_rx);
+setAttr("ctrlFK_Lf_ArmC.ry", $rightArmC_ry);
+setAttr("ctrlFK_Lf_ArmC.rz", $rightArmC_rz);
+//--------------- HANDS -----------------//
+
+// -------------- HIPS --------------//
+float $rtHip_ry = getAttr("ctrlFK_Cn_HipA.ry");
+setAttr("ctrlFK_Cn_HipA.ry", -($rtHip_ry));
+// -------------- HIPS --------------//
+
+//-------------- FEET/LEGS  ------------//
+float $rtFoot_tx = getAttr("ctrlIK_Rt_LegIK.tx");
+float $rtFoot_ty = getAttr("ctrlIK_Rt_LegIK.ty");
+float $rtFoot_tz = getAttr("ctrlIK_Rt_LegIK.tz");
+float $rtFoot_heel = getAttr("ctrlIK_Rt_LegIK.heelRoll");
+float $rtFoot_ball = getAttr("ctrlIK_Rt_LegIK.ballRoll");
+float $rtFoot_toe = getAttr("ctrlIK_Rt_LegIK.toeRoll");
+
+float $lfFoot_tx = getAttr("ctrlIK_Lf_LegIK.tx");
+float $lfFoot_ty = getAttr("ctrlIK_Lf_LegIK.ty");
+float $lfFoot_tz = getAttr("ctrlIK_Lf_LegIK.tz");
+float $lfFoot_heel = getAttr("ctrlIK_Lf_LegIK.heelRoll");
+float $lfFoot_ball = getAttr("ctrlIK_Lf_LegIK.ballRoll");
+float $lfFoot_toe = getAttr("ctrlIK_Lf_LegIK.toeRoll");
+
+setAttr("ctrlIK_Rt_LegIK.tx", $lfFoot_tx);
+setAttr("ctrlIK_Rt_LegIK.ty", $lfFoot_ty);
+setAttr("ctrlIK_Rt_LegIK.tz", $lfFoot_tz);
+setAttr("ctrlIK_Rt_LegIK.heelRoll", $lfFoot_heel);
+setAttr("ctrlIK_Rt_LegIK.ballRoll", $lfFoot_ball);
+setAttr("ctrlIK_Rt_LegIK.toeRoll", $lfFoot_toe);
+
+setAttr("ctrlIK_Lf_LegIK.tx", $rtFoot_tx);
+setAttr("ctrlIK_Lf_LegIK.ty", $rtFoot_ty);
+setAttr("ctrlIK_Lf_LegIK.tz", $rtFoot_tz);
+setAttr("ctrlIK_Lf_LegIK.heelRoll", $rtFoot_heel);
+setAttr("ctrlIK_Lf_LegIK.ballRoll", $rtFoot_ball);
+setAttr("ctrlIK_Lf_LegIK.toeRoll", $rtFoot_toe);
+//-------------- FEET/LEGS  ------------//
